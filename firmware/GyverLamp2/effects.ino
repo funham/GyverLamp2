@@ -3,8 +3,7 @@ void effectsRoutine() {
   if (!effTmr.isReady()) return;
 
   if (dawnTmr.running()) {
-    fill_solid(leds, MAX_LEDS, ColorFromPalette(HeatColors_p, dawnTmr.getLength8(), scaleFF(dawnTmr.getLength8(), dawn.bright), LINEARBLEND));
-    drawClock(cfg.length / 2 - 4, 100, 0);
+    fill_solid(leds, MAX_LEDS, ColorFromPalette(HeatColors_p, dawnTmr.getLength8(), scaleFF(dawnTmr.getLength8(), dawn.bright), LINEARBLEND
     FastLED.show();
     if (dawnTmr.isReady()) {
       dawnTmr.stop();
